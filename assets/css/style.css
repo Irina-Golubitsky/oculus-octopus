@@ -4,14 +4,13 @@
     border: #dfe0e2 solid 1px;
 }
 .game-wrap:hover .game{
-  
-    opacity:.8;
     cursor: pointer;
+    opacity:.8;
     transform: scale(1);
     box-shadow:none;
 }
 .game-wrap:hover .game:hover{
-       cursor: pointer;
+    cursor: pointer;
     transform:scale(1.08);
     filter:blur(0px);
     opacity:1;
