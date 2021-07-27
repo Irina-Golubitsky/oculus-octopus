@@ -6,6 +6,7 @@
 .game-wrap:hover .game{
     
     opacity:.8;
+    cursor: pointer;
     transform: scale(1);
     box-shadow:none;
 }
