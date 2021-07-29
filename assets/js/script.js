@@ -160,13 +160,15 @@ function GBsearch(){
                         chDiv.append(divName);
                         divInfo.addClass("flex flex-col lg:flex-row  space-x-4  mx-auto  flex-auto text-gray-200");
                         let icon = $('<img>');
-                     icon.addClass("object-contain");
+                     icon.addClass("object-contain h-24");
                      icon.attr("src", data.results[0].image.icon_url);
                      divInfo.append(icon);
                      let p1 = $('<p>'),p2 = $('<p>');
                      p1.html(data.results[0].deck);
+                     p1.addClass("mt-2 text-sm text-gray-400");
                      divCont.append(p1);
-                     p1.html(data.results[0].description);
+                     p2.html(data.results[0].description);
+                     p2.addClass("mt-2 text-sm text-gray-400");
                      divCont.append(p2);
                     divInfo.append(divCont);
                     chDiv.append(divInfo);
