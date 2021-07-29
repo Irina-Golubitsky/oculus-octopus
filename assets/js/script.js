@@ -180,7 +180,7 @@ function GBsearch(){
                 }
 
                 );
-                }else{NothingFound();}
+                }else{NothingFound(); }
         });
             
            
