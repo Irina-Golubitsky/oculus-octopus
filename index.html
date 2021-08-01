@@ -7,34 +7,59 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- stylesheets -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="icon" type="image/png" href="assets/img/pngegg.png" />
     <title>games</title>
 </head>
 
-<body class="">
-
+<body>
+    <!-- first screen beginning  -->
     <div id="top" class="h-screen flex justify-center items-center bg-cover bg-center "
         style="background-image: linear-gradient(rgb(0 0 0 / 40%), rgb(0 0 0 / 40%)), url('assets/img/bg.jpeg')">
-        <div class="absolute top-0 left-0 mt-8 ml-8">
-            <div class="mb-2 sm:mb-0 flex flex-row items-center
-            ">
+        <!-- logo -->
+        <div class="absolute top-0 left-0 mt-5 ml-5">
+            <div class="mb-2 sm:mb-0 flex flex-row items-center">
                 <div class=" self-center mr-2">
-                    <img class="w-20 self-center" src="assets/img/pngegg.png" />
+                    <img class="w-16 self-center" src="assets/img/pngegg.png" />
                 </div>
                 <div class=" ml-0">
-                    <span class="text-4xl no-underline text-gray-300 font-mono font-extrabold">Oculus<span
+                    <span class="text-3xl no-underline text-gray-300 font-mono font-extrabold">Oculus<span
                             class="text-red-700">Octopus</span>
 
                 </div>
             </div>
-            <!-- <img src="pngegg.png" class="w-28">  -->
         </div>
-
+        <!-- logo end-->
+        <!-- search history -->
+        <div
+            class="absolute bg-red-600 hover:bg-red-700 text-white top-0 right-0  mt-8 mr-5 flex items-center justify-center">
+            <div class=" relative inline-block text-left dropdown">
+                <span><button id="historyButton"
+                        class="inline-flex justify-center w-full p-3  transition duration-150 ease-in-out focus:outline-none  ">
+                        <span>Search history</span>
+                        <svg class="w-5 h-5 ml-2 -mr-1" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button></span>
+                <div
+                    class="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
+                    <div id="history-selector"
+                        class="absolute right-0 w-56 mt-4 origin-top-right  divide-y divide-gray-700 bg-red-600  text-white  shadow-lg outline-none">
+                        <!-- <div class="py-1">
+                            <p class="hover:bg-red-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
+                                role="menuitem"></p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- search hisory end -->
+        <!-- first screen content -->
         <div class="space-y-5">
-            <p class="text-white font-bold text-5xl flex flex-col items-center ">
+            <p class="text-white font-bold text-4xl flex flex-col items-center ">
                 Game Discovery Service
-
             </p>
             <p class="text-white font-semibold text-3xl flex flex-col items-center"><span>We use
                     RAWG<br></span><span>500,000+ games for 50 platforms</span></p>
@@ -46,26 +71,21 @@
                     class=" p-4 text-l font-semibold bg-red-600 hover:bg-red-700 text-white">Search</button>
             </div>
         </div>
+        <!-- first screen content end-->
     </div>
-
+    <!-- first screen end  -->
+    <!-- game cards screen -->
     <div class="flex items-center justify-center bg-black p-5">
-        <div id="forecast" class="">
+        <div id="gameCards" class="">
         </div>
     </div>
-
-    <!-- <div class="h-screen flex items-center justify-center bg-black p-5"> -->
-    <!-- <div id="one-game" class=""></div>
-    </div>
-    <hr />
-    <div class="h-screen flex items-center justify-center bg-black p-5">
-        <div id="socialgrep" class=""></div>
-    </div> -->
-    <!-- one game -->
-
+    <!-- game cards screen end-->
+    <!-- one game screen -->
     <div id="one-game" class="py-12 bg-black">
         <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="overflow-hidden  shadow-xl bg-gray-800 sm:rounded-lg">
-                <div >
+                <!-- game info -->
+                <div>
                     <div class="p-6  border-b  bg-gray-800 border-gray-700 sm:px-20">
                         <div id="game-name" class="mt-8 text-2xl text-gray-200"> </div>
                         <div class="flex flex-col lg:flex-row  space-x-4  mx-auto  flex-auto">
@@ -74,6 +94,7 @@
                         </div>
                     </div>
                     <div class="grid grid-cols-1 bg-opacity-25 bg-gray-800 md:grid-cols-2">
+                        <!-- platform -->
                         <div class="p-6">
                             <div class="flex items-center"><svg fill="none" stroke="currentColor" stroke-linecap="round"
                                     stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
@@ -88,12 +109,7 @@
                                 </div>
                             </div>
                             <div class="ml-12">
-                                <div class="mt-2 text-sm text-gray-400"> Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Architecto eius nulla deleniti non minus fugit velit iusto,
-                                    blanditiis dolor placeat harum debitis totam eligendi id impedit iste quo? A,
-                                    placeat!
-                                </div>
-
+                                <div id='game-genre' class="mt-2 text-sm text-gray-400"> rwer</div>
                             </div>
                         </div>
                         <div class="p-6 border-t border-gray-700 md:border-t-0 md:border-l">
@@ -103,79 +119,92 @@
                                         d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                                 </svg>
                                 <div class="ml-4 text-lg font-semibold leading-7 text-gray-200">
-                                    <a href="https://laracasts.com">Platform</a>
+                                    <a href="https://laracasts.com">Platforms</a>
                                 </div>
                             </div>
                             <div class="ml-12">
-                                <div class="mt-2 text-sm text-gray-400"> Lorem ipsum, dolor sit amet consectetur
-                                    adipisicing elit. Aut animi quas omnis quidem consectetur recusandae ab voluptatibus
-                                    eos nisi possimus perspiciatis harum nulla tempore aliquam incidunt, quis
-                                    repudiandae, corporis voluptatem!
-
-                                </div>
+                                <div id="game-platform" class="mt-2 text-sm text-gray-400"></div>
                             </div>
                         </div>
                         <div class="p-6 border-t border-gray-700">
-                            <div class="flex items-center"><svg fill="none" stroke="currentColor" stroke-linecap="round"
-                                    stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
-                                    class="w-8 h-8 text-gray-200">
-                                    <path
-                                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
-                                    </path>
-                                </svg>
+                            <div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                              </svg>
                                 <div class="ml-4 text-lg font-semibold leading-7 text-gray-200">
-                                    info
+                                    Rating
                                 </div>
                             </div>
                             <div class="ml-12">
-                                <div class="mt-2 text-sm text-gray-400"> Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Voluptatum beatae cum tempore amet deleniti commodi, velit,
-                                    voluptates facere nemo similique nobis dolor rerum doloremque eos. Deserunt
-                                    temporibus itaque autem quaerat. </div>
+                                <div id="game-rating" class="mt-2 text-sm text-gray-400"></div>
                             </div>
                         </div>
                         <div class="p-6 border-t border-gray-700 md:border-l">
-                            <div class="flex items-center"><svg fill="none" stroke="currentColor" stroke-linecap="round"
-                                    stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
-                                    class="w-8 h-8 text-gray-200">
-                                    <path
-                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
-                                    </path>
-                                </svg>
+                            <div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                              </svg>
                                 <div class="ml-4 text-lg font-semibold leading-7 text-gray-200">
-                                    info</div>
+                                    Websie</div>
                             </div>
                             <div class="ml-12">
-                                <div class="mt-2 text-sm text-gray-400">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae voluptate qui,
-                                    nihil cumque inventore veritatis tempore dignissimos ad quas blanditiis distinctio.
-                                    Porro laudantium magni id laborum in odio ullam amet?/div>
-                                </div>
+                                <div id="game-website" class="mt-2 text-sm text-gray-400"></div>
                             </div>
                         </div>
                     </div>
+                    <!-- characters button and div for characers info-->
                     <div><button id='characters'
-                        class=" p-4 text-l w-full font-semibold bg-red-600 hover:bg-red-700 text-white">Characters</button>
+                            class=" p-4 text-l w-full font-semibold bg-red-600 hover:bg-red-700 text-white">Characters</button>
+                    </div>
+                    <div id="game-content"></div>
                 </div>
-                 <div id="game-content"></div> 
-
-                </div>
-           
-
             </div>
         </div>
-
     </div>
-    <!-- </div> -->
-
-    <!-- one game end -->
-
+    <!-- one game screen end -->
     <hr />
+    <!-- faq -->
     <div class="min-h-screen bg-black space-y-10">
         <p class="p-5 text-white font-bold text-5xl flex text-gray-200 justify-center">Frequently Asked Questions
         </p>
         <div class="space-y-5 flex flex-col justify-center items-center ">
-            <div class="p-5 bg-gray-800 text-gray-200 w-3/4">
+
+			<div class="w-3/4">
+				<div class="tabs">
+				  <!--tab 1-->
+				  <div class="tab">
+					<input type="radio" id="rd1" name="rd">
+					<label class="tab-label bg-gray-800 text-3xl text-white" for="rd1">What is OculusOctopus?</label>
+					<div  class="tab-content">
+					  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, facilis.
+					</div>
+				  </div>
+				  <!--tab 2-->
+				  <div class="tab">
+					<input type="radio" id="rd2" name="rd">
+					<label class="tab-label bg-gray-800 text-3xl text-white" for="rd2">Question 2?</label>
+					<div class="tab-content">
+					  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
+					</div>
+				  </div>
+				  <!--tab 3-->
+				   <div class="tab">
+					<input type="radio" id="rd3" name="rd">
+					<label class="tab-label bg-gray-800 text-3xl text-white" for="rd3">Question 3?</label>
+					<div class="tab-content">
+					  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
+					</div>
+				  </div>
+				  <!--tab 4-->
+				   <div class="tab">
+					<input type="radio" id="rd4" name="rd">
+					<label class="tab-label bg-gray-800 text-3xl text-white" for="rd4">Question 4?</label>
+					<div class="tab-content">
+					  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
+					</div>
+				  </div>
+				</div>
+			</div>
+
+<!--        <div class="p-5 bg-gray-800 text-gray-200 w-3/4">
                 <p class="text-3xl text-white">What is OculusOctopus ?</p>
             </div>
             <div class="p-5 bg-gray-800 text-gray-200 w-3/4">
@@ -187,13 +216,11 @@
             <div class="p-5 bg-gray-800 text-gray-200 w-3/4">
                 <p class="text-3xl text-white">Question 4 ?</p>
             </div>
+-->
         </div>
     </div>
-    <hr />
-    </div>
+     <!-- scripts -->
     <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
-
-
     <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
