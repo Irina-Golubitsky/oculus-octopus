@@ -1,5 +1,5 @@
 // declare variables
-rawgKey = "ad7de449944a49eb8e4ece2f99e17776";
+rawgKey = "f3010909d70f4ff2abc6b64da92fe5fe";
 gbKey = "82377eacd0eaabd596437efbea6cb8449b5bd190";
 let game = '';
 $('#one-game').hide();
